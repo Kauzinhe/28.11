@@ -1,0 +1,210 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f1e8; /* Tom bege country */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #8b4513; /* Marrom country */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Dourado */
+}
+
+.carrinho button {
+    background-color: #ffd700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('https://via.placeholder.com/1920x600?text=Fundo+Country'); /* Placeholder para imagem de fundo */
+    background-size: cover;
+    color: white;
+}
+
+.hero button {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background-color: #a0522d;
+}
+
+/* Produtos */
+.produtos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.filtros {
+    margin-bottom: 30px;
+}
+
+.filtros select {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.produto-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.produto-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.produto {
+    min-width: 300px;
+    margin: 0 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produto button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.detalhes-btn {
+    background-color: #8b4513;
+    color: white;
+}
+
+.add-carrinho {
+    background-color: #ffd700;
+    color: black;
+}
+
+.add-carrinho:hover {
+    background-color: #ffed4e;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Footer */
+footer {
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    .produto-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .produto {
+        min-width: 80%;
+    }
+}

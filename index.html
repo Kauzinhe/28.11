@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calças Country - Loja Interativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Calças Country</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="carrinho">
+            <button id="carrinho-btn">Carrinho (<span id="carrinho-count">0</span>)</button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Bem-vindo à Loja de Calças Country</h2>
+        <p>Descubra o melhor em calças jeans, couro e estilos rústicos para o seu look country.</p>
+        <button onclick="scrollToProdutos()">Ver Produtos</button>
+    </section>
+
+    <section id="produtos" class="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="filtros">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria">
+                <option value="todos">Todos</option>
+                <option value="jeans">Jeans</option>
+                <option value="couro">Couro</option>
+                <option value="rustico">Rústico</option>
+            </select>
+            <label for="tamanho">Tamanho:</label>
+            <select id="tamanho">
+                <option value="todos">Todos</option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+        </div>
+        <div class="produto-slider">
+            <div class="produto-container">
+                <div class="produto" data-categoria="jeans" data-tamanho="M">
+                    <img src="madeinzw1" alt="Calça Jeans Country Azul">
+                   <img src="madeinzw2" alt="Calça Jeans Country Azul">
+                    <img src="madeinzw3" alt="Calça Jeans Country Azul">
+                    <h3>Calça Jeans Made in ZW</h3>
+                    <p>R$ 959,00</p>
+                    <button class="detalhes-btn" data-id="1">Ver Detalhes</button>
+                    <button class="add-carrinho" data-id="1">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto" data-categoria="couro" data-tamanho="G">
+                    <img src="westdust1" alt="Calça Jeans West Dust">
+                    <img src="westdust2" alt="Calça Jeans West Dust">
+                    <img src="westdust" alt="Calça Jeans West Dust">
+
+                    <h3>Calça Jeans West Dust</h3>
+                    <p>R$ 299,00</p>
+                    <button class="detalhes-btn" data-id="2">Ver Detalhes</button>
+                    <button class="add-carrinho" data-id="2">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto" data-categoria="rustico" data-tamanho="P">
+                    <img src="turmalina1" alt="Calça Jeans Turmalina">
+                  <img src="turmalina2" alt="Calça Jeans Turmalina">
+
+                    <h3>Calça Jeans Turmalina</h3>
+                    <p>R$ 689,00</p>
+                    <button class="detalhes-btn" data-id="3">Ver Detalhes</button>
+                    <button class="add-carrinho" data-id="3">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto" data-categoria="jeans" data-tamanho="G">
+                    <img src="preto1" alt="Calça Jeans Country Preta">
+                    <img src="preto2" alt="Calça Jeans Country Preta">
+                    <img src="preto3" alt="Calça Jeans Country Preta">
+
+                    <h3>Calça Jeans Country Preta</h3>
+                    <p>R$ 469,00</p>
+                    <button class="detalhes-btn" data-id="4">Ver Detalhes</button>
+                    <button class="add-carrinho" data-id="4">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto" data-categoria="couro" data-tamanho="M">
+                    <img src="calçacouro1" alt="Calça Couro Country Preto">
+                    <img src="calçacouro2" alt="Calça Couro Country Preto">
+                    <img src="calçacouro3" alt="Calça Couro Country Preto">
+
+                    <h3>Calça Couro Country Preto</h3>
+                    <p>R$ 1.220,00</p>
+                    <button class="detalhes-btn" data-id="5">Ver Detalhes</button>
+                    <button class="add-carrinho" data-id="5">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto" data-categoria="rustico" data-tamanho="P">
+                    <img src="viking1" alt="Calça Jeans">
+                 <img src="viking2" alt="Calça Jeans">
+                    <h3>Calça Jeans Viking</h3>
+                    <p>R$ 890,00</p>
+                    <button class="detalhes-btn" data-id="6">Ver Detalhes</button>
+                    <button class="add-carrinho" data-id="6">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-img" src="" alt="">
+            <p id="modal-desc"></p>
+            <p id="modal-price"></p>
+        </div>
+    </div>
+
+    <footer id="contato">
+        <p>&copy; 2025 Calças Country. Todos os direitos reservados.</p>
+        <p>Contato: almeidakauane@calcascountry.com | Telefone: (11) 1234-5678</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
